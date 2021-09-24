@@ -23,7 +23,7 @@ Figure4.png: Figure4/plot.R
 	convert +append 4_1.png 4_2.png 4_3.png Figure4.png
 	rm 4_1.png 4_2.png 4_3.png
 
-Figure1.png: afam-african-proportions.png Figure1B/Figure_1B.png
+Figure1.png: Figure_1A.png Figure1B/Figure_1B.png
 	convert -font helvetica -fill black -pointsize 150  -draw "gravity northwest text 0,0 'a'" afam-african-proportions.png 1_a.png
 	convert -font helvetica -fill black -pointsize 150  -draw "gravity northwest text 0,0 'b'" Figure1B/Figure_1B_v2.png 1_b.png
 	convert -append 1_a.png 1_b.png $@
