@@ -25,9 +25,9 @@ Figure4.png: Figure4/plot.R
 
 Figure1B/Figure_1B.png: Figure1B/plot.R
 	cd Figure1B/ && Rscript plot.R
-	
+
 Figure1.png: Figure_1A.png Figure1B/Figure_1B.png
-	convert -font helvetica -fill black -pointsize 150  -draw "gravity northwest text 0,0 'a'" afam-african-proportions.png 1_a.png
-	convert -font helvetica -fill black -pointsize 150  -draw "gravity northwest text 0,0 'b'" Figure1B/Figure_1B_v2.png 1_b.png
+	convert -font helvetica -fill black -pointsize 150  -draw "gravity northwest text 0,0 'a'" Figure_1A.png 1_a.png
+	convert -font helvetica -fill black -pointsize 150  -draw "gravity northwest text 0,0 'b'" Figure1B/Figure_1B.png 1_b.png
 	convert -append 1_a.png 1_b.png $@
 	rm 1_a.png 1_b.png
